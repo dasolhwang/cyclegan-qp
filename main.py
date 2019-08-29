@@ -384,12 +384,13 @@ if __name__ == "__main__":
 
         parser = argparse.ArgumentParser()
         parser.add_argument('input', type=str, default='sun_flower.jpg')
+        parser.add_argument('style type', type=str, default='vg')
         args = parser.parse_args()
 
 
         infer(
             iteration=INFER_ITER,
-            style=INFER_STYLE,
+            style=args.input,
             img_name=args.input,
             in_img_dir=IN_IMG_DIR,
             out_rec_dir=OUT_REC_DIR,
