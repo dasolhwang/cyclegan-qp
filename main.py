@@ -375,14 +375,22 @@ def infer(iteration, style, img_name, in_img_dir, out_rec_dir, out_sty_dir, img_
 
 
 if __name__ == "__main__":
-    
+
     if TRAIN:
         train()
     else:
+
+        import argparse
+
+        parser = argparse.ArgumentParser()
+        parser.add_argument('input', type=str, default='sun_flower.jpg')
+        args = parser.parse_args()
+
+
         infer(
             iteration=INFER_ITER,
             style=INFER_STYLE,
-            img_name=IMG_NAME,
+            img_name=args.input,
             in_img_dir=IN_IMG_DIR,
             out_rec_dir=OUT_REC_DIR,
             out_sty_dir=OUT_STY_DIR,
