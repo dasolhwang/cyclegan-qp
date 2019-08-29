@@ -23,7 +23,7 @@ DATASET_PATH = {
 }
 LOAD_DIM = 286
 CROP_DIM = 256
-CKPT_DIR = "cycleGAN/checkpoints"
+CKPT_DIR = "cyclegan-qp"
 
 SAMPLE_DIR = "samples"
 
@@ -53,7 +53,7 @@ TRAIN = False  # `False` runs `infer` function & `True` runs `train` function
 INFER_ITER = 15000
 INFER_STYLE = "vg"
 IMG_NAME = "sun_flower.jpg"
-IN_IMG_DIR = "cycleGAN/images"
+IN_IMG_DIR = "cyclegan-qp/images"
 OUT_STY_DIR = "sty"
 OUT_REC_DIR = "rec"
 IMG_SIZE = None  # If `None` then stylizes original size `IMG_NAME`
