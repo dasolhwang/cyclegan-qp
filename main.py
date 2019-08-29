@@ -307,8 +307,8 @@ def infer(iteration, style, img_name, in_img_dir, out_rec_dir, out_sty_dir, img_
     # Try loading models from checkpoints at `iteration`
     try:
         # Get checkpoint paths
-        g_model_path = os.path.join(CKPT_DIR, f"G_{iteration}.pth")
-        f_model_path = os.path.join(CKPT_DIR, f"F_{iteration}.pth")
+        g_model_path = os.path.join(CKPT_DIR, style, f"G_{iteration}.pth")
+        f_model_path = os.path.join(CKPT_DIR, style, f"F_{iteration}.pth")
         
         # Load parameters from checkpoint paths
         G.load_state_dict(torch.load(g_model_path, map_location=device))
