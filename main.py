@@ -300,6 +300,10 @@ def train():
 
 def infer(iteration, style, img_name, in_img_dir, out_rec_dir, out_sty_dir, img_size=None):
     
+    if style == 'uk':
+        iteration = 12000
+
+
     # Set neural nets to evaluation mode
     G.eval()
     F.eval()
@@ -387,10 +391,6 @@ if __name__ == "__main__":
         parser.add_argument('style', type=str, default='vg')
         args = parser.parse_args()
         
-        if args.style == 'uk':
-            ITFER_ITER = 12000
-
-
         infer(
             iteration=INFER_ITER,
             style=args.style,
