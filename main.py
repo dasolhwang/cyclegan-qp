@@ -386,6 +386,9 @@ if __name__ == "__main__":
         parser.add_argument('input', type=str, default='sun_flower.jpg')
         parser.add_argument('style', type=str, default='vg')
         args = parser.parse_args()
+        
+        if args.style == 'uk':
+            ITFER_ITER = 12000
 
 
         infer(
